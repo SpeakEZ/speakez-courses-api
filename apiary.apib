@@ -44,3 +44,74 @@ A single Note object with all its details
 
 ### Remove a Note [DELETE]
 + Response 204
+
+# Group Course Service
+  For retrieving course information from CAP.
+
+## Course [/courses/{id}]
+   Operations on a specific course.
+
++ Parameters
+  + id (required, int) ... ID of the specific course
+
+### Retrieve course structure [GET]
+
++ Response 200
+
+        {  
+          "id":1,
+          "modules":[  
+            {  
+              "type":"module",
+              "name":"Unit 1",
+              "id":1,
+              "modules":[  
+                {  
+                  "type":"module",
+                  "name":"Lesson 1",
+                  "id":2,
+                  "modules":[  
+                    {  
+                      "type":"activityList",
+                      "name":"Activity List 1",
+                      "id":1,
+                      "activities":[  
+                        {  
+                          "name":"Activity 1",
+                          "id":1
+                        },
+                        {  
+                          "name":"Activity 2",
+                          "id":2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {  
+                  "type":"module",
+                  "name":"Lesson 2",
+                  "id":3,
+                  "modules":[  
+                    {  
+                      "type":"activityList",
+                      "name":"Activity List 2",
+                      "id":2,
+                      "activities":[  
+                        {  
+                          "name":"Activity 3",
+                          "id":3
+                        },
+                        {  
+                          "name":"Activity 4",
+                          "id":4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+
